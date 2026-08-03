@@ -1,0 +1,8 @@
+class Solution(object):
+    def smallerNumbersThanCurrent(self, nums):
+        d={}
+        x=sorted(nums)
+        for char in x:
+            d[char]=x.index(char)
+        return [d[y] for y in nums]        
+        

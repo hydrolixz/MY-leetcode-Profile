@@ -1,0 +1,10 @@
+class Solution(object):
+    def canConstruct(self, ransomNote, magazine):
+        mg=list(magazine)
+        for char in ransomNote:
+            if char not in mg:
+                return False
+            else:
+                mg.remove(char)
+        return True
+        

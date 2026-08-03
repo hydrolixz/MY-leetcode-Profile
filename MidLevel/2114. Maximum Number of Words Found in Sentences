@@ -1,0 +1,12 @@
+class Solution(object):
+    def mostWordsFound(self, sentences):
+        wcount=[]
+        for sentence in sentences:
+            x=sentence.split()
+            y=0
+            for word in x:
+                y+=1
+            wcount.append(y)
+        return max(wcount)
+
+        

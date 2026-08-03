@@ -1,0 +1,11 @@
+class Solution(object):
+    def numIdenticalPairs(self, nums):
+        count=0
+        k=0
+        while k<=len(nums):
+         for i in range(k,len(nums)):
+            if nums[k]==nums[i]:
+                count+=1
+         k+=1
+        return count-len(nums)
+            

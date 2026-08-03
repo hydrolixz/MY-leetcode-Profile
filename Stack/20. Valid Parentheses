@@ -1,0 +1,13 @@
+class Solution(object):
+    def isValid(self, x):
+        s=[]
+        d={"(":")","[":"]","{":"}"}
+        for char in x:
+            if char in list(d.keys()):
+                s.append(char)
+            else:
+                if len(s)>=1 and d[s[-1]]==char:
+                    s.pop(-1)
+                else:
+                    return False
+        return len(s)==0

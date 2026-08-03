@@ -1,0 +1,8 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        k=0
+        while k<=len(nums):
+            for i in range(len(nums)):
+                if nums[k]+nums[i]==target and k!=i:
+                    return sorted([k,i])
+            k+=1

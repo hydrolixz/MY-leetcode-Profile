@@ -1,0 +1,17 @@
+class Solution(object):
+    def fizzBuzz(self, n):
+        lst=[]
+        Q='FizzBuzz'
+        W="Fizz"
+        E="Buzz"
+        for i in range(n):
+            if (i+1)%3==0 and (i+1)%5!=0:
+                lst.append(W)
+            elif (i+1)%3==0 and (i+1)%5==0:
+                lst.append(Q)
+            elif (i+1)%3!=0 and (i+1)%5==0:
+                lst.append(E)
+            elif (i+1)%3!=0 and (i+1)%5!=0:
+                lst.append(str(i+1))
+        return lst
+                

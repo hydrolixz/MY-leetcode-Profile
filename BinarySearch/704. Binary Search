@@ -1,0 +1,14 @@
+class Solution(object):
+    def search(self, nums, target):
+        begin=0
+        end=len(nums)-1
+        while begin<=end:
+            mpvalue=(begin+end)//2        
+            mp=nums[mpvalue]
+            if target==mp:
+                return mpvalue
+            elif target<mp:
+                end=mpvalue-1
+            elif target>mp:
+                begin=mpvalue+1
+        return -1

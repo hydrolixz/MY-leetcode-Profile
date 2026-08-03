@@ -1,0 +1,14 @@
+class Solution(object):
+    def findErrorNums(self, nums):
+        d={}
+        for char in range(1,len(nums)+1):
+            d[char]=0
+        for char in nums:
+            d[char]+=1   
+        for key,value in d.items():
+            if value==2:
+                x=key
+            elif value==0:
+                y=key
+        return [x,y]
+        

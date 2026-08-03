@@ -1,0 +1,16 @@
+class Solution(object):
+    def missingNumber(self, nums):
+        nums.sort()
+        d={}
+        begin=nums[0]
+        end=nums[-1]
+        for i in range(end):
+            d[i]=0
+        for key,value in d.items():
+            if key in nums:
+                d[key]=1     
+        for key,value in d.items():
+            if value==0:
+                return key
+        return end+1
+                    

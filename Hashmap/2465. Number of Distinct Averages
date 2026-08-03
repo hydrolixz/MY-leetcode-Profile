@@ -1,0 +1,11 @@
+class Solution(object):
+    def distinctAverages(self, nums):
+        nums.sort()
+        k=[]
+        while len(nums)>0:
+         k.append((nums[0]+nums[-1])/2.0)
+         nums.pop(0)
+         nums.pop(-1)
+        return len(set(k))
+
+                

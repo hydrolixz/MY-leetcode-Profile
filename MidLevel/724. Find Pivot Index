@@ -1,0 +1,9 @@
+class Solution(object):
+    def pivotIndex(self, nums):
+        s=sum(nums)
+        for i in range(len(nums)):
+            left=sum([x for x in nums[:i]])
+            right=s-left-nums[i]
+            if left==right:
+                return i
+        return -1

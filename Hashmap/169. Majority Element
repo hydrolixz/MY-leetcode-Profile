@@ -1,0 +1,25 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        count={}
+        keysl=[]
+        largest=0
+        k=0
+        for char in nums:
+            if char not in keysl:
+               keysl.append(char)
+        for y in keysl:
+            count[y]=0
+        for ch in nums:
+            count[ch]+=1
+        for key,value in count.items():
+            if value>largest:
+                largest=value
+        for key,value in count.items():
+            if value==largest:
+                k+=1
+        if k>1:
+            return False
+        else:
+            for key,value in count.items():
+                if value==largest:
+                    return key

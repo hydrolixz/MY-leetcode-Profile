@@ -1,0 +1,11 @@
+class Solution(object):
+    def runningSum(self, nums):
+        lst=[]
+        lst.append(nums[0])
+        x=nums[0]
+        for i in range(len(nums)-1):
+            x+=int(nums[i+1])
+            lst.append(x)
+        return lst
+
+        

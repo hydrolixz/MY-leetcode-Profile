@@ -1,0 +1,8 @@
+class Solution(object):
+    def findWordsContaining(self, words, x):
+        k=[]
+        for i in range(len(words)):
+            if x in words[i]:
+                k.append(i)
+        return k
+        

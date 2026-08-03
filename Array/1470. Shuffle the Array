@@ -1,0 +1,14 @@
+class Solution(object):
+    def shuffle(self, nums, n):
+        numsx=[]
+        numsy=[]
+        numsfinal=[]
+        for i in range(len(nums)):
+            if i<=n-1:
+                numsx.append(nums[i])
+            else:
+                numsy.append(nums[i])
+        for i in range(n):
+             numsfinal.append(numsx[i])
+             numsfinal.append(numsy[i])
+        return numsfinal

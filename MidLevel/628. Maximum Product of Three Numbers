@@ -1,0 +1,16 @@
+class Solution(object):
+    def maximumProduct(self, nums):
+        nums.sort()
+        ng=[]
+        pg=[]
+        max=nums[-1]*nums[-2]*nums[-3]
+        for char in nums:
+            if char<0:
+                ng.append(char)
+            elif char>0:
+                pg.append(char)
+        ng.sort()
+        if len(pg)>=1 and len(ng)>=2:
+            if ng[0]*ng[1]*pg[-1]>max:
+                max=ng[0]*ng[1]*pg[-1]
+        return max
