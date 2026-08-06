@@ -1,0 +1,10 @@
+class Solution(object):
+    def distributeCandies(self, x):
+        d=list(set(x))
+        if len(d)>(len(x)/2):
+            return len(x)/2
+        else:
+            return len(d)
+         
+        
+        
