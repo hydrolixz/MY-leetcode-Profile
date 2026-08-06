@@ -1,0 +1,29 @@
+class Solution(object):
+    def summaryRanges(self, nums):
+        y=[]
+        start=0
+        current=0
+        for i in range(len(nums)-1):
+         if (nums[i]+1)==nums[i+1]:
+            current+=1
+         else:
+            if start==current:
+             y.append(str(nums[start]))
+             start=i+1
+             current=i+1
+            else:
+                y.append(str(nums[start])+"->"+str(nums[current]))
+                start=i+1
+                current=i+1
+        if current==(len(nums)-1):
+         if start!=current:
+            y.append(str(nums[start])+"->"+str(nums[current]))
+            return y
+         if start==current:
+            y.append(str(nums[start]))
+            return y
+        return y
+
+        
+
+        return y
