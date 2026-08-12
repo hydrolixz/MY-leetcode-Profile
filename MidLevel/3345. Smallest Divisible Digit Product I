@@ -1,0 +1,25 @@
+class Solution(object):
+    def smallestNumber(self, n, t):
+        for i in range(10):
+            if n>=10:
+                try:
+                    if (int(str(n)[0])*int(str(n)[1]))%(t)==0:
+                        return n
+                    else:
+                        n+=1
+                except ZeroDivisionError:
+                        return n
+            else: 
+                try:       
+                    if (int(str(n)[0]))%(t)==0:
+                        return n
+                    else:
+                        n+=1
+                except ZeroDivisionError:
+                        return n
+
+                
+
+
+
+        
